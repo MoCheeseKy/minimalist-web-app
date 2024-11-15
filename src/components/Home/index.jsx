@@ -10,7 +10,6 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 export default function HomeComponent() {
   return (
     <>
-      <WhatsappFloat />
       <Header />
       <WrapperComponent className='md:pb-24 pb-16'>
         <div id='cls' className='h-[76px]' />
@@ -86,6 +85,7 @@ export default function HomeComponent() {
             ></iframe>
           </div> */}
         </div>
+        <WhatsappFloat />
       </WrapperComponent>
       <Footer />
     </>
