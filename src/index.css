@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url(../public/Assets/Fonts/Inter/inter.ttf);
+  font-family: Inter;
+}
+
+* {
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9a4b2c;
+}
