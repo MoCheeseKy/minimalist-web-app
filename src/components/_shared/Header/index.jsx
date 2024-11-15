@@ -15,8 +15,8 @@ export default function Header() {
     { label: 'Transaksi', href: '/booking-class' },
   ];
   return (
-    <WrapperComponent className='shadow-md fixed z-[999999]'>
-      <header className='w-full py-2 flex justify-between items-center z-[999999]'>
+    <WrapperComponent className='shadow-md fixed z-[999999] bg-white'>
+      <header className='w-full py-2 flex justify-between items-center z-[999999] bg-white'>
         <div className='w-[200px]'>
           <Link to={'/'}>
             <div className='w-[104px] h-[60px] bg-logo bg-cover ' />

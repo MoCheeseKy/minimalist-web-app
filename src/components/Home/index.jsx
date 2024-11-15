@@ -85,8 +85,8 @@ export default function HomeComponent() {
             ></iframe>
           </div> */}
         </div>
-        <WhatsappFloat />
       </WrapperComponent>
+      <WhatsappFloat />
       <Footer />
     </>
   );
