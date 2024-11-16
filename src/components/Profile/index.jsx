@@ -1,8 +1,8 @@
 import Header from '../_shared/Header';
 import WrapperComponent from '../_shared/Wrapper';
 
-import { FiPlus } from 'react-icons/fi';
-import { RiFilePaper2Line } from 'react-icons/ri';
+import { FiPlus, FiCalendar } from 'react-icons/fi';
+import { RiFilePaper2Line, RiHistoryFill } from 'react-icons/ri';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import { IoIosKey } from 'react-icons/io';
 
@@ -38,6 +38,12 @@ export default function ProfileComponent() {
                 </button>
               </div>
               <div className='flex flex-col'>
+                <div className='flex gap-4 items-center text-xl font-medium py-4 border-t-[1px] border-gray-300'>
+                  <FiCalendar /> Jadwal Saya
+                </div>
+                <div className='flex gap-4 items-center text-xl font-medium py-4 border-t-[1px] border-gray-300'>
+                  <RiHistoryFill /> Riwayat Kelas
+                </div>
                 <div className='flex gap-4 items-center text-xl font-medium py-4 border-t-[1px] border-gray-300'>
                   <RiFilePaper2Line /> Syarat & ketentuan
                 </div>

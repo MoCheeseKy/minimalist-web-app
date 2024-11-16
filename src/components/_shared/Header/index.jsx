@@ -8,11 +8,11 @@ import { RiMenu3Fill, RiCloseLargeFill } from 'react-icons/ri';
 export default function Header() {
   const [OpenNav, setOpenNav] = useState(false);
   const LinkRoute = [
-    { label: 'Tentang', href: '/homepage' },
     { label: 'Galeri', href: '/our-galery' },
-    { label: 'Daftar Kelas', href: '/class-list' },
+    { label: 'Kelas', href: '/class' },
     { label: 'Bantuan', href: '/help' },
-    { label: 'Transaksi', href: '/booking-class' },
+    { label: 'Daftar Kelas', href: '/booking-class' },
+    { label: 'Jadwal', href: '/schedule' },
   ];
   return (
     <WrapperComponent className='shadow-md fixed z-[999999] bg-white'>
