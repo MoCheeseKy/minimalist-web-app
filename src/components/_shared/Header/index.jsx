@@ -4,9 +4,11 @@ import WrapperComponent from '../Wrapper';
 import { Link } from 'react-router-dom';
 
 import { RiMenu3Fill, RiCloseLargeFill } from 'react-icons/ri';
+import { FiPlus } from 'react-icons/fi';
 
 export default function Header() {
   const [OpenNav, setOpenNav] = useState(false);
+  const [IsLogin, setIsLogin] = useState(false);
   const LinkRoute = [
     { label: 'Galeri', href: '/our-galery' },
     { label: 'Kelas', href: '/class' },
@@ -33,13 +35,26 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className='w-[200px] hidden lg:flex gap-3 items-center'>
-          <button className='bg-white text-[#9a4b2c] border-2 border-[#9a4b2c] py-2 px-6 text-xs rounded'>
-            Register
-          </button>
-          <button className='bg-[#9a4b2c] text-white border-2 border-[#9a4b2c] py-2 px-6 text-xs rounded'>
-            Login
-          </button>
+        <div
+          className={`w-[200px] hidden lg:flex ${
+            IsLogin ? 'gap-6' : 'gap-3'
+          } items-center justify-end`}
+        >
+          {IsLogin ? (
+            <>
+              <p className='text-xl text-main font-bold'>Rifky</p>
+              <div className='w-12 h-12 bg-main rounded-full' />
+            </>
+          ) : (
+            <>
+              <button className='bg-white text-[#9a4b2c] border-2 border-[#9a4b2c] py-2 px-6 text-xs rounded'>
+                Register
+              </button>
+              <button className='bg-[#9a4b2c] text-white border-2 border-[#9a4b2c] py-2 px-6 text-xs rounded'>
+                Login
+              </button>
+            </>
+          )}
         </div>
         {OpenNav ? (
           <>
@@ -58,7 +73,7 @@ export default function Header() {
         )}
       </header>
       {OpenNav && (
-        <div className='flex flex-col justify-between items-center w-[100vw] h-[100vh] overflow-auto fixed top-0 left-0 z-[99] bg-white pb-12'>
+        <div className='flex flex-col justify-between items-center w-[100vw] h-[100vh] overflow-auto fixed top-0 left-0 z-[99] bg-white p-4 pb-12'>
           <div className='h-[76px]' />
           <div className='flex flex-col gap-8 items-center text-center'>
             <Link
@@ -92,14 +107,35 @@ export default function Header() {
               Profile
             </Link>
           </div>
-          <div className='w-screen flex flex-col gap-3 '>
-            <button className='bg-white text-[#9a4b2c] border-2 border-[#9a4b2c] py-2 px-6 text-xl rounded w-[calc(100%-32px)] ml-4'>
-              Register
-            </button>
-            <button className='bg-[#9a4b2c] text-white border-2 border-[#9a4b2c] py-2 px-6 text-xl rounded w-[calc(100%-32px)] ml-4'>
-              Login
-            </button>
-          </div>
+          {IsLogin ? (
+            <>
+              <div className='w-full md:w-[544px] border-4 border-main p-4 md:p-6 rounded-xl flex flex-col md:flex-row justify-between md:items-center'>
+                <div>
+                  <p className='text-base md:text-xl text-main font-semibold'>
+                    Kuota Kelas :{' '}
+                  </p>
+                  <p className='text-[32px] md:text-[36px] text-main font-bold'>
+                    0 Pertemuan
+                  </p>
+                </div>
+                <button className='w-full md:w-fit h-fit flex gap-2 text-lg md:text-2xl text-white font-bold items-center justify-center py-2 px-6 mt-2 md:mt-0 rounded-[16px] bg-main'>
+                  <FiPlus />
+                  Top Up
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className='w-screen flex flex-col gap-3 '>
+                <button className='bg-white text-[#9a4b2c] border-2 border-[#9a4b2c] py-2 px-6 text-xl rounded w-[calc(100%-32px)] ml-4'>
+                  Register
+                </button>
+                <button className='bg-[#9a4b2c] text-white border-2 border-[#9a4b2c] py-2 px-6 text-xl rounded w-[calc(100%-32px)] ml-4'>
+                  Login
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </WrapperComponent>
