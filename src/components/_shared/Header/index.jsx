@@ -10,11 +10,11 @@ export default function Header() {
   const [OpenNav, setOpenNav] = useState(false);
   const [IsLogin, setIsLogin] = useState(false);
   const LinkRoute = [
+    { label: 'Tentang', href: '/about' },
     { label: 'Galeri', href: '/our-galery' },
-    { label: 'Kelas', href: '/class' },
-    { label: 'Bantuan', href: '/help' },
     { label: 'Daftar Kelas', href: '/booking-class' },
     { label: 'Jadwal', href: '/schedule' },
+    { label: 'Bantuan', href: '/help' },
   ];
   return (
     <WrapperComponent className='shadow-md fixed z-[999999] bg-white'>
